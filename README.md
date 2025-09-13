@@ -37,6 +37,9 @@ There is no rocket science here, and all of thise can be done on your calculator
 - Export capabilities for investment plans
 - Comprehensive tooltip system with detailed explanations
 
+## Fast Access
+https://ke0xes.github.io/Aegis/
+
 ## Quick Start
 
 ### Installation
