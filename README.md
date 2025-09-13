@@ -8,7 +8,8 @@
 
 ## Overview
 
-Aegis is a comprehensive web-based planning tool designed for strategic cyber defense investment modeling and analysis. Named after the protective shield of Zeus, Aegis helps organizations plan and visualize their cyber defense investments from 2024 to 2040.
+Aegis is a comprehensive web-based planning tool designed for strategic cyber defense investment modeling and analysis. Aegis helps Nation states plan and visualize their cyber defense investments from 2024 to 2040.
+There is no rocket science here, and all of thise can be done on your calculator or spreadsheet application. Its intented use is to convey an approach to the question "What should we budget for Cyber Defense Centers and SOCs". With a strategic mindset the answer to the question is "What are you trying to Protect" 😅
 
 ## Features
 
@@ -86,25 +87,25 @@ For support, feature requests, or bug reports, please open an issue on GitHub.
 
 This software is currently in **BETA** phase and is provided for testing, evaluation, and feedback purposes only.
 
-- No Warranty
+- **No Warranty**:
 This software is provided "AS IS" without warranty of any kind, express or implied. We make no guarantees regarding accuracy, reliability, or fitness for any particular purpose.
 
--  Use at Your Own Risk
+-  **Use at Your Own Risk**:
 Users acknowledge that this is pre-release software that may contain bugs, errors, or incomplete features. Any decisions made based on this tool's output are at the user's sole discretion and risk.
 
-- Not for Production Use
+- **Not for Production Use**:
 This beta version is not recommended for critical business decisions or official investment planning without independent verification of all calculations and assumptions.
 
-- Data Accuracy
+- **Data Accuracy**:
 While we strive for accuracy, GDP figures and exchange rates are approximations based on available data. Users should verify all financial data independently before making investment decisions.
 
-- Feedback Welcome
+- **Feedback Welcome**:
 As beta software, we encourage user feedback to improve functionality and accuracy. Please report any issues or suggestions.
 
-- Subject to Change
+- **Subject to Change**:
 Features, calculations, and interface elements may change significantly in future releases without notice.
 
-## Contact & Support
+## Contact & Support**:
 
 For bug reports, feature requests, or general feedback, please open an issue on our GitHub repository.
 
