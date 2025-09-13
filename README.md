@@ -50,7 +50,7 @@ https://ke0xes.github.io/Aegis/
    cd aegis
    ```
 
-2. **Start a local server**
+2. **Start a local server - Using Python, Node.js or PHP assuming either is installed beforehand**
    ```bash
    # Using Python 3
    python3 -m http.server 9001
@@ -64,7 +64,7 @@ https://ke0xes.github.io/Aegis/
 
 3. **Open in browser**
    ```
-   http://localhost:8080
+   http://localhost:9001
    ```
 
 ## Usage
