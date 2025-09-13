@@ -109,15 +109,10 @@ As beta software, we encourage user feedback to improve functionality and accura
 - **Subject to Change**:
 Features, calculations, and interface elements may change significantly in future releases without notice.
 
-## Contact & Support**:
-
-For bug reports, feature requests, or general feedback, please open an issue on our GitHub repository.
 
 **By using this software, you acknowledge that you have read, understood, and agree to these terms.**
 
 ---
-
-*Aegis Beta - Protecting your digital future through strategic planning*
 
 ## License
 
