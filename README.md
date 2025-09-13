@@ -1,5 +1,5 @@
 # Aegis
-**Strategic Cyber Defense Investment Planning Tool**
+**Strategic National Cyber Defense Investment Planning Tool**
 
 ![Version](https://img.shields.io/badge/version-0.7.1-blue.svg)
 ![License](https://img.shields.io/badge/license-CC%20BY%204.0-green.svg)
@@ -9,7 +9,8 @@
 ## Overview
 
 Aegis is a comprehensive web-based planning tool designed for strategic cyber defense investment modeling and analysis. Aegis helps Nation states plan and visualize their cyber defense investments from 2024 to 2040.
-There is no rocket science here, and all of thise can be done on your calculator or spreadsheet application. Its intented use is to convey an approach to the question "What should we budget for Cyber Defense Centers and SOCs". With a strategic mindset the answer to the question is "What are you trying to Protect" 😅
+
+There is no rocket science here, and all of thise can be done on your calculator or spreadsheet application. Its intented use is to convey an approach to the question "What should be my budget for building and operating Cyber Defense Centers and Security Operations Centeres". With a strategic mindset the answer to the question is "What are you trying to Protect?" 😅
 
 ## Features
 
