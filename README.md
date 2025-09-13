@@ -82,6 +82,38 @@ Aegis is a comprehensive web-based planning tool designed for strategic cyber de
 
 For support, feature requests, or bug reports, please open an issue on GitHub.
 
+## Disclaimer
+
+This software is currently in **BETA** phase and is provided for testing, evaluation, and feedback purposes only.
+
+- No Warranty
+This software is provided "AS IS" without warranty of any kind, express or implied. We make no guarantees regarding accuracy, reliability, or fitness for any particular purpose.
+
+-  Use at Your Own Risk
+Users acknowledge that this is pre-release software that may contain bugs, errors, or incomplete features. Any decisions made based on this tool's output are at the user's sole discretion and risk.
+
+- Not for Production Use
+This beta version is not recommended for critical business decisions or official investment planning without independent verification of all calculations and assumptions.
+
+- Data Accuracy
+While we strive for accuracy, GDP figures and exchange rates are approximations based on available data. Users should verify all financial data independently before making investment decisions.
+
+- Feedback Welcome
+As beta software, we encourage user feedback to improve functionality and accuracy. Please report any issues or suggestions.
+
+- Subject to Change
+Features, calculations, and interface elements may change significantly in future releases without notice.
+
+## Contact & Support
+
+For bug reports, feature requests, or general feedback, please open an issue on our GitHub repository.
+
+**By using this software, you acknowledge that you have read, understood, and agree to these terms.**
+
+---
+
+*Aegis Beta - Protecting your digital future through strategic planning*
+
 ## License
 
 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons By" width="25" height="25"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Creative Commons By" width="25" height="25"> <br>
