@@ -82,10 +82,6 @@ Aegis is a comprehensive web-based planning tool designed for strategic cyber de
 
 For support, feature requests, or bug reports, please open an issue on GitHub.
 
----
-
-**Aegis** - *Protecting your digital future through strategic planning*
-
 ## License
 
 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons By" width="25" height="25"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Creative Commons By" width="25" height="25"> <br>
