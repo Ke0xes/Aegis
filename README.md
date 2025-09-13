@@ -19,8 +19,7 @@ Aegis is a comprehensive web-based planning tool designed for strategic cyber de
 
 ### 🌍 **Global Support**
 - 181+ countries with 2024 GDP data (IMF/World Bank)
-- Multi-currency support with real-time exchange rates
-- Automatic currency selection based on country
+- Multi-currency support but with hard coded values
 - Custom country and GDP input options
 
 ### 📊 **Advanced Analytics**
@@ -29,12 +28,6 @@ Aegis is a comprehensive web-based planning tool designed for strategic cyber de
 - Budget utilization tracking
 - Preset investment models (Conservative, Balanced, Aggressive)
 
-### 🎨 **Modern Interface**
-- **Classic Theme**: Traditional blue/gray professional styling
-- **Dark Theme**: Midnight Blue with bright accent colors
-- Responsive design for all devices
-- Interactive tooltips and help system
-
 ### 💡 **Smart Features**
 - Test mode for experimentation
 - Real-time number formatting and validation
@@ -42,10 +35,6 @@ Aegis is a comprehensive web-based planning tool designed for strategic cyber de
 - Comprehensive tooltip system with detailed explanations
 
 ## Quick Start
-
-### Prerequisites
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- Local web server (for development)
 
 ### Installation
 
@@ -58,13 +47,13 @@ Aegis is a comprehensive web-based planning tool designed for strategic cyber de
 2. **Start a local server**
    ```bash
    # Using Python 3
-   python3 -m http.server 8080
+   python3 -m http.server 9001
    
    # Using Node.js
    npx serve .
    
    # Using PHP
-   php -S localhost:8080
+   php -S localhost:9001
    ```
 
 3. **Open in browser**
@@ -81,22 +70,6 @@ Aegis is a comprehensive web-based planning tool designed for strategic cyber de
 3. **Choose Model**: Select Conservative, Balanced, or Aggressive investment approach
 4. **Analyze Results**: Review year-by-year breakdown and total investments
 5. **Export Data**: Save your investment plan for presentation or implementation
-
-### Investment Models
-
-- **Conservative**: 0.08% of GDP - Essential security infrastructure
-- **Balanced**: 0.12% of GDP - Comprehensive security approach
-- **Aggressive**: 0.20% of GDP - Maximum security investment
-
-## Installation
-
-```bash
-git clone https://github.com/yourusername/aegis.git
-cd aegis
-python3 -m http.server 8080
-```
-
-Open http://localhost:8080 in your browser.
 
 ## Technical Details
 
