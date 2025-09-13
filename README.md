@@ -3,6 +3,7 @@
 
 ![Version](https://img.shields.io/badge/version-0.7.1-blue.svg)
 ![License](https://img.shields.io/badge/license-CC%20BY%204.0-green.svg)
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FKe0xes%2FAegis&countColor=%2337d67a&style=flat)
 ![Status](https://img.shields.io/badge/status-Beta-orange.svg)
 
 ## Overview
@@ -77,10 +78,6 @@ Aegis is a comprehensive web-based planning tool designed for strategic cyber de
 - **Architecture**: Client-side only, no backend required
 - **Browser Support**: Chrome 80+, Firefox 75+, Safari 13+, Edge 80+
 
-## License
-
-This project is licensed under the Creative Commons Attribution 4.0 International License.
-
 ## Support
 
 For support, feature requests, or bug reports, please open an issue on GitHub.
@@ -88,6 +85,8 @@ For support, feature requests, or bug reports, please open an issue on GitHub.
 ---
 
 **Aegis** - *Protecting your digital future through strategic planning*
+
+## License
 
 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons By" width="25" height="25"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Creative Commons By" width="25" height="25"> <br>
 <a href="https://github.com/Ke0xes/Detection-Engineering-Framework">Detection Engineering Framework</a> © 2021 by <a href="https://kunal.hatode.com">Kunal Hatode</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a>
