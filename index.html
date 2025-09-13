@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Defense Investment Plan Model (2024-2040)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TEST MODE BUTTON - START (easily removable) -->
+    <div class="test-mode-container">
+        <button id="testModeButton" class="test-mode-btn" onclick="activateTestMode()">Test Mode</button>
+    </div>
+    <!-- TEST MODE BUTTON - END -->
+
+    <div class="theme-toggle-container">
+        <span id="currentThemeLabel" class="theme-label">Classic Theme</span>
+        <label class="switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <div class="container">
+        <h1>Cyber Defense Investment Plan Model (2024-2040)</h1>
+
+        <div class="input-section">
+            <h2>Assumptions & Inputs</h2>
+
+            <div class="field-container">
+                <label class="main-label" for="nationalGdp">National GDP (Base Year 2024, in USD) <span class="info-icon" data-info-id="nationalGdp">i</span></label>
+                <div class="input-section-group grid-layout">
+                    <div class="grid-cell">
+                        <label class="field-label">Country:</label>
+                    </div>
+                    <div class="grid-cell">
+                        <div class="input-group">
+                            <select id="countrySelector" class="form-input" onchange="updateGdpByCountry()">
+                                <option value="">Select a country...</option>
+                                <option value="US" selected>United States</option>
+                                <option value="CN">China</option>
+                                <option value="DE">Germany</option>
+                                <option value="JP">Japan</option>
+                                <option value="IN">India</option>
+                                <option value="GB">United Kingdom</option>
+                                <option value="FR">France</option>
+                                <option value="IT">Italy</option>
+                                <option value="BR">Brazil</option>
+                                <option value="CA">Canada</option>
+                                <option value="RU">Russia</option>
+                                <option value="MX">Mexico</option>
+                                <option value="AU">Australia</option>
+                                <option value="KR">South Korea</option>
+                                <option value="ES">Spain</option>
+                                <option value="ID">Indonesia</option>
+                                <option value="NL">Netherlands</option>
+                                <option value="TR">Turkey</option>
+                                <option value="SA">Saudi Arabia</option>
+                                <option value="CH">Switzerland</option>
+                                <option value="PL">Poland</option>
+                                <option value="AR">Argentina</option>
+                                <option value="BE">Belgium</option>
+                                <option value="SE">Sweden</option>
+                                <option value="IE">Ireland</option>
+                                <option value="TH">Thailand</option>
+                                <option value="AE">United Arab Emirates</option>
+                                <option value="IL">Israel</option>
+                                <option value="AT">Austria</option>
+                                <option value="SG">Singapore</option>
+                                <option value="NO">Norway</option>
+                                <option value="BD">Bangladesh</option>
+                                <option value="PH">Philippines</option>
+                                <option value="VN">Vietnam</option>
+                                <option value="DK">Denmark</option>
+                                <option value="IR">Iran</option>
+                                <option value="MY">Malaysia</option>
+                                <option value="EG">Egypt</option>
+                                <option value="HK">Hong Kong</option>
+                                <option value="ZA">South Africa</option>
+                                <option value="NG">Nigeria</option>
+                                <option value="CO">Colombia</option>
+                                <option value="RO">Romania</option>
+                                <option value="CZ">Czech Republic</option>
+                                <option value="PK">Pakistan</option>
+                                <option value="CL">Chile</option>
+                                <option value="FI">Finland</option>
+                                <option value="PT">Portugal</option>
+                                <option value="PE">Peru</option>
+                                <option value="KZ">Kazakhstan</option>
+                                <option value="NZ">New Zealand</option>
+                                <option value="IQ">Iraq</option>
+                                <option value="DZ">Algeria</option>
+                                <option value="GR">Greece</option>
+                                <option value="QA">Qatar</option>
+                                <option value="HU">Hungary</option>
+                                <option value="UA">Ukraine</option>
+                                <option value="KW">Kuwait</option>
+                                <option value="ET">Ethiopia</option>
+                                <option value="MA">Morocco</option>
+                                <option value="SK">Slovakia</option>
+                                <option value="DO">Dominican Republic</option>
+                                <option value="EC">Ecuador</option>
+                                <option value="SD">Sudan</option>
+                                <option value="OM">Oman</option>
+                                <option value="KE">Kenya</option>
+                                <option value="GT">Guatemala</option>
+                                <option value="BG">Bulgaria</option>
+                                <option value="UZ">Uzbekistan</option>
+                                <option value="CR">Costa Rica</option>
+                                <option value="LU">Luxembourg</option>
+                                <option value="AO">Angola</option>
+                                <option value="HR">Croatia</option>
+                                <option value="LK">Sri Lanka</option>
+                                <option value="PA">Panama</option>
+                                <option value="RS">Serbia</option>
+                                <option value="LT">Lithuania</option>
+                                <option value="TZ">Tanzania</option>
+                                <option value="CI">Côte d'Ivoire</option>
+                                <option value="UY">Uruguay</option>
+                                <option value="GH">Ghana</option>
+                                <option value="AZ">Azerbaijan</option>
+                                <option value="BY">Belarus</option>
+                                <option value="SI">Slovenia</option>
+                                <option value="MM">Myanmar</option>
+                                <option value="CD">DR Congo</option>
+                                <option value="TM">Turkmenistan</option>
+                                <option value="JO">Jordan</option>
+                                <option value="CM">Cameroon</option>
+                                <option value="UG">Uganda</option>
+                                <option value="TN">Tunisia</option>
+                                <option value="BH">Bahrain</option>
+                                <option value="MO">Macao</option>
+                                <option value="BO">Bolivia</option>
+                                <option value="LY">Libya</option>
+                                <option value="PY">Paraguay</option>
+                                <option value="KH">Cambodia</option>
+                                <option value="LV">Latvia</option>
+                                <option value="EE">Estonia</option>
+                                <option value="NP">Nepal</option>
+                                <option value="ZW">Zimbabwe</option>
+                                <option value="HN">Honduras</option>
+                                <option value="SV">El Salvador</option>
+                                <option value="CY">Cyprus</option>
+                                <option value="IS">Iceland</option>
+                                <option value="SN">Senegal</option>
+                                <option value="GE">Georgia</option>
+                                <option value="PG">Papua New Guinea</option>
+                                <option value="ZM">Zambia</option>
+                                <option value="BA">Bosnia and Herzegovina</option>
+                                <option value="TT">Trinidad and Tobago</option>
+                                <option value="AM">Armenia</option>
+                                <option value="AL">Albania</option>
+                                <option value="MT">Malta</option>
+                                <option value="GN">Guinea</option>
+                                <option value="MZ">Mozambique</option>
+                                <option value="ML">Mali</option>
+                                <option value="MN">Mongolia</option>
+                                <option value="BF">Burkina Faso</option>
+                                <option value="HT">Haiti</option>
+                                <option value="BJ">Benin</option>
+                                <option value="JM">Jamaica</option>
+                                <option value="BW">Botswana</option>
+                                <option value="GA">Gabon</option>
+                                <option value="NI">Nicaragua</option>
+                                <option value="PS">Palestine</option>
+                                <option value="AF">Afghanistan</option>
+                                <option value="GY">Guyana</option>
+                                <option value="NE">Niger</option>
+                                <option value="MD">Moldova</option>
+                                <option value="LA">Laos</option>
+                                <option value="MG">Madagascar</option>
+                                <option value="MK">North Macedonia</option>
+                                <option value="CG">Congo</option>
+                                <option value="BN">Brunei</option>
+                                <option value="MU">Mauritius</option>
+                                <option value="BS">Bahamas</option>
+                                <option value="RW">Rwanda</option>
+                                <option value="KG">Kyrgyzstan</option>
+                                <option value="TD">Chad</option>
+                                <option value="MW">Malawi</option>
+                                <option value="NA">Namibia</option>
+                                <option value="GQ">Equatorial Guinea</option>
+                                <option value="TJ">Tajikistan</option>
+                                <option value="MR">Mauritania</option>
+                                <option value="TG">Togo</option>
+                                <option value="ME">Montenegro</option>
+                                <option value="BB">Barbados</option>
+                                <option value="MV">Maldives</option>
+                                <option value="SL">Sierra Leone</option>
+                                <option value="FJ">Fiji</option>
+                                <option value="SZ">Eswatini</option>
+                                <option value="LR">Liberia</option>
+                                <option value="AD">Andorra</option>
+                                <option value="AW">Aruba</option>
+                                <option value="SR">Suriname</option>
+                                <option value="BZ">Belize</option>
+                                <option value="BI">Burundi</option>
+                                <option value="CF">Central African Republic</option>
+                                <option value="CV">Cabo Verde</option>
+                                <option value="LC">Saint Lucia</option>
+                                <option value="GM">Gambia</option>
+                                <option value="SC">Seychelles</option>
+                                <option value="LS">Lesotho</option>
+                                <option value="TL">Timor-Leste</option>
+                                <option value="GW">Guinea-Bissau</option>
+                                <option value="AG">Antigua and Barbuda</option>
+                                <option value="SB">Solomon Islands</option>
+                                <option value="KM">Comoros</option>
+                                <option value="GD">Grenada</option>
+                                <option value="VU">Vanuatu</option>
+                                <option value="VC">St. Vincent & Grenadines</option>
+                                <option value="KN">Saint Kitts & Nevis</option>
+                                <option value="WS">Samoa</option>
+                                <option value="ST">Sao Tome & Principe</option>
+                                <option value="DM">Dominica</option>
+                                <option value="FM">Micronesia</option>
+                                <option value="PW">Palau</option>
+                                <option value="KI">Kiribati</option>
+                                <option value="MH">Marshall Islands</option>
+                                <option value="TV">Tuvalu</option>
+                                <option value="custom">Other/Custom...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid-cell">
+                        <label class="field-label">Value:</label>
+                    </div>
+                    <div class="grid-cell">
+                        <div class="input-group">
+                            <input type="number" id="nationalGdp" value="27720700000000" step="1" onchange="calculateModel()" oninput="updateGdpInWords()">
+                        </div>
+                        <div id="gdpInWords" class="number-words"></div>
+                    </div>
+                    <div class="grid-cell">
+                        <label for="nationalGdpSource">Source:</label>
+                    </div>
+                    <div class="grid-cell">
+                        <div class="input-group source-input-group">
+                            <textarea id="nationalGdpSource" placeholder="e.g., World Bank, IMF World Economic Outlook 2024"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field-container">
+                <label class="main-label" for="nationalGdpGrowthRate">National GDP Annual Growth Rate <span class="info-icon" data-info-id="nationalGdpGrowthRate">i</span></label>
+                <div class="input-section-group">
+                    <div class="mode-selector">
+                        <span class="mode-label active" id="gdpGrowthModeFixedLabel">Use Fixed Annual Rate</span>
+                        <label class="switch">
+                            <input type="checkbox" id="gdpGrowthModeToggle" onchange="toggleInputMode('gdpGrowth', this.checked); calculateModel();">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="mode-label" id="gdpGrowthModeVariableLabel">Customize Yearly Rates</span>
+                    </div>
+                    <div class="flex-container">
+                        <div class="grid-layout">
+                            <div class="grid-cell">
+                                <label>Value:</label>
+                            </div>
+                            <div class="grid-cell">
+                                <div class="input-group">
+                                    <input type="number" id="nationalGdpGrowthRate" value="1.00" step="0.01" onchange="calculateModel()">
+                                </div>
+                            </div>
+                            <div class="grid-cell">
+                                <label for="nationalGdpGrowthRateSource">Source:</label>
+                            </div>
+                            <div class="grid-cell">
+                                <div class="input-group source-input-group">
+                                    <textarea id="nationalGdpGrowthRateSource" placeholder="e.g., National Treasury Projection"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preset-models-box">
+                            <h4>Preset Sample Models</h4>
+                            <div class="preset-buttons">
+                                <button class="preset-button" onclick="applyGdpPresetModel('cautious')">Cautious</button>
+                                <button class="preset-button" onclick="applyGdpPresetModel('moderate')">Moderate</button>
+                                <button class="preset-button" onclick="applyGdpPresetModel('robust')">Robust</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="yearlyGdpGrowthInputsContainer" class="yearly-inputs-grid" style="display: none;"></div>
+                </div>
+            </div>
+
+            <div class="field-container">
+                <label class="main-label" for="militaryGdpAllocation">Percentage of GDP Allocated to Military Spending <span class="info-icon" data-info-id="militaryGdpAllocation">i</span></label>
+                <div class="input-section-group">
+                    <div class="mode-selector">
+                        <span class="mode-label active" id="militaryAllocModeFixedLabel">Use Fixed Annual Rate</span>
+                        <label class="switch">
+                            <input type="checkbox" id="militaryAllocModeToggle" onchange="toggleInputMode('militaryAllocation', this.checked); calculateModel();">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="mode-label" id="militaryAllocModeVariableLabel">Customize Yearly Rates</span>
+                    </div>
+                    <div class="flex-container">
+                        <div class="grid-layout">
+                            <div class="grid-cell">
+                                <label>Value:</label>
+                            </div>
+                            <div class="grid-cell">
+                                <div class="input-group">
+                                    <input type="number" id="militaryGdpAllocation" value="2.14" step="0.01" onchange="calculateModel()">
+                                </div>
+                            </div>
+                            <div class="grid-cell">
+                                <label for="militaryGdpAllocationSource">Source:</label>
+                            </div>
+                            <div class="grid-cell">
+                                <div class="input-group source-input-group">
+                                    <textarea id="militaryGdpAllocationSource" placeholder="e.g., NATO Commitment, Gov. Policy"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preset-models-box">
+                            <h4>Preset Sample Models</h4>
+                            <div class="preset-buttons">
+                                <button class="preset-button" onclick="applyMilitarySpendPreset('conservative')">EU</button>
+                                <button class="preset-button" onclick="applyMilitarySpendPreset('balanced')">Nordic</button>
+                                <button class="preset-button" onclick="applyMilitarySpendPreset('committed')">NATO</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="yearlyMilitaryAllocationInputsContainer" class="yearly-inputs-grid" style="display: none;"></div>
+                </div>
+            </div>
+
+            <div class="field-container">
+                <label class="main-label" for="overallCyberActivitiesApportionmentRate">Overall Cyber Activities Apportionment <span class="info-icon" data-info-id="overallCyberActivitiesApportionment">i</span></label>
+                <div class="input-section-group">
+                <div class="mode-selector">
+                    <span class="mode-label active" id="overallCyberActivitiesApportionmentModeFixedLabel">Use Fixed Annual Rate</span>
+                    <label class="switch">
+                        <input type="checkbox" id="overallCyberActivitiesApportionmentModeToggle" onchange="toggleInputMode('overallCyberActivitiesApportionment', this.checked); calculateModel();">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="mode-label" id="overallCyberActivitiesApportionmentModeVariableLabel">Customize Yearly Rates</span>
+                </div>
+                    <div class="flex-container">
+                        <div class="grid-layout">
+                            <div class="grid-cell">
+                                <label>Value:</label>
+                            </div>
+                            <div class="grid-cell">
+                                <div class="input-group">
+                                    <input type="number" id="overallCyberActivitiesApportionment" value="6.00" step="0.01" onchange="calculateModel()" class="form-input">
+                                </div>
+                            </div>
+                            <div class="grid-cell">
+                                <label for="overallCyberActivitiesApportionmentSource">Source:</label>
+                            </div>
+                            <div class="grid-cell">
+                                <div class="input-group source-input-group">
+                                    <textarea id="overallCyberActivitiesApportionmentSource" placeholder="e.g., National Cyber Strategy" class="form-input"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preset-models-box">
+                            <h4>Preset Sample Models</h4>
+                            <div class="preset-buttons">
+                                <button class="preset-button" onclick="applyPresetModel('low')">Low</button>
+                                <button class="preset-button" onclick="applyPresetModel('medium')">Medium</button>
+                                <button class="preset-button" onclick="applyPresetModel('high')">High</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="yearlyOverallCyberActivitiesApportionmentInputsContainer" class="yearly-inputs-grid" style="display: none;"></div>
+                </div>
+            </div>
+
+            <div class="field-container">
+                <label class="main-label" for="cyberDefenseCenterSocAllocation">Percentage of Cyber Activities Budget for CDC & SOC Combined <span class="info-icon" data-info-id="cyberDefenseCenterSocAllocation">i</span></label>
+                <div class="input-section-group">
+                    <div class="grid-layout">
+                        <div class="grid-cell">
+                            <label>Value:</label>
+                        </div>
+                        <div class="grid-cell">
+                            <div class="input-group">
+                                <input type="number" id="cyberDefenseCenterSocAllocation" value="33" step="1" onchange="calculateModel()">
+                            </div>
+                        </div>
+                        <div class="grid-cell">
+                            <label for="cyberDefenseCenterSocAllocationSource">Source:</label>
+                        </div>
+                        <div class="grid-cell">
+                            <div class="input-group source-input-group">
+                                <textarea id="cyberDefenseCenterSocAllocationSource" placeholder="e.g., Strategic Cyber Defense Plan"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field-container">
+                <label class="main-label" for="cyberDefenseVsSocSplit">Allocation Split: CDC vs. SOCs (% for CDC) <span class="info-icon" data-info-id="cyberDefenseVsSocSplit">i</span></label>
+                <div class="input-section-group">
+                    <div class="grid-layout">
+                        <div class="grid-cell">
+                            <label>Value:</label>
+                        </div>
+                        <div class="grid-cell">
+                            <div class="input-group">
+                                <input type="number" id="cyberDefenseVsSocSplit" value="25" step="1" onchange="calculateModel()">
+                            </div>
+                        </div>
+                        <div class="grid-cell">
+                            <label for="cyberDefenseVsSocSplitSource">Source:</label>
+                        </div>
+                        <div class="grid-cell">
+                            <div class="input-group source-input-group">
+                                <textarea id="cyberDefenseVsSocSplitSource" placeholder="e.g., CDC Strategic Framework"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field-container">
+                <label class="main-label" for="investmentParameters">Investment Parameters <span class="info-icon" data-info-id="investmentParameters">i</span></label>
+                <div class="input-section-group">
+                    <div class="grid-layout">
+                        <div class="grid-cell">
+                            <label for="inflationRate">National Annual Inflation Rate:</label>
+                        </div>
+                        <div class="grid-cell">
+                            <div class="input-group">
+                                <input type="number" id="inflationRate" value="2.5" step="0.1" onchange="calculateInvestmentBreakdown()">
+                            </div>
+                        </div>
+                        <div class="grid-cell">
+                            <label for="assetLifecycle">Asset Lifecycle (Years):</label>
+                        </div>
+                        <div class="grid-cell">
+                            <div class="input-group">
+                                <input type="number" id="assetLifecycle" value="5" step="1" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field-container">
+                <label class="main-label" for="threatLandscape">Threat Landscape & Risk Assessment <span class="info-icon" data-info-id="threatLandscape">i</span></label>
+                <div class="input-section-group">
+                    <div class="grid-layout">
+                        <div class="grid-cell">
+                            <label>Assessment:</label>
+                        </div>
+                        <div class="grid-cell">
+                            <div class="input-group">
+                                <textarea id="threatLandscape" rows="4" class="full-width" placeholder="Enter qualitative and quantitative data about the threat landscape, key risks, and strategic priorities. This will be added to the narrative output."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field-container">
+                <label class="main-label" for="currencySettings">Currency Settings <span class="info-icon" data-info-id="currencySettings">i</span></label>
+                <div class="input-section-group">
+                    <div class="grid-layout">
+                        <div class="grid-cell">
+                            <label>Display Currency:</label>
+                        </div>
+                        <div class="grid-cell">
+                            <div class="input-group">
+                                <select id="currencySelector" class="form-input">
+                                    <option value="USD">US Dollar (USD)</option>
+                                    <option value="EUR">Euro (EUR)</option>
+                                    <option value="GBP">British Pound (GBP)</option>
+                                    <option value="JPY">Japanese Yen (JPY)</option>
+                                    <option value="CAD">Canadian Dollar (CAD)</option>
+                                    <option value="AUD">Australian Dollar (AUD)</option>
+                                    <option value="CHF">Swiss Franc (CHF)</option>
+                                    <option value="CNY">Chinese Yuan (CNY)</option>
+                                    <option value="SEK">Swedish Krona (SEK)</option>
+                                    <option value="NOK">Norwegian Krone (NOK)</option>
+                                    <option value="DKK">Danish Krone (DKK)</option>
+                                    <option value="SGD">Singapore Dollar (SGD)</option>
+                                    <option value="HKD">Hong Kong Dollar (HKD)</option>
+                                    <option value="INR">Indian Rupee (INR)</option>
+                                    <option value="KRW">South Korean Won (KRW)</option>
+                                    <option value="NZD">New Zealand Dollar (NZD)</option>
+                                    <option value="MXN">Mexican Peso (MXN)</option>
+                                    <option value="BRL">Brazilian Real (BRL)</option>
+                                    <option value="ZAR">South African Rand (ZAR)</option>
+                                    <option value="RUB">Russian Ruble (RUB)</option>
+                                    <option value="THB">Thai Baht (THB)</option>
+                                    <option value="TRY">Turkish Lira (TRY)</option>
+                                    <option value="PLN">Polish Zloty (PLN)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="grid-cell">
+                            <label>Exchange Rate:</label>
+                        </div>
+                        <div class="grid-cell">
+                            <div class="input-group">
+                                <input type="number" id="currentExchangeRateInput" step="0.0001" class="form-input" placeholder="Rate from 1 USD">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="yearly-summary-section">
+            <h2>Year-on-Year Budget Summary (2024-2040)</h2>
+            <div class="table-container">
+                <table id="yearlyCombinedSpendTable">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Annual National GDP</td></tr>
+                        <tr><td>Military Budget</td></tr>
+                        <tr><td>Cyber Budget</td></tr>
+                        <tr><td>Combined SOC and CDC Budget</td></tr>
+                        <tr><td class="indented-row-label">SOC Budget</td></tr>
+                        <tr><td class="indented-row-label">CDC Budget</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="action-buttons">
+                 <button onclick="exportTableToCSV('yearlyCombinedSpendTable', 'Year_on_Year_Spend_Summary')">Export Summary to CSV</button>
+            </div>
+        </div>
+
+        <div class="cdc-utilization-section">
+            <!-- Budget Utilization View Toggle -->
+            <div class="utilization-view-toggle-container">
+                <h3>Budget View Selection</h3>
+                <div class="utilization-view-selector">
+                    <button class="view-toggle-btn active" id="cdcViewBtn" onclick="switchUtilizationView('cdc')">CDC Budget</button>
+                    <button class="view-toggle-btn" id="socViewBtn" onclick="switchUtilizationView('soc')">SOC Budget</button>
+                    <button class="view-toggle-btn" id="combinedViewBtn" onclick="switchUtilizationView('combined')">Combined</button>
+                </div>
+            </div>
+
+            <!-- Dynamic Section Title -->
+            <h2 id="utilizationSectionTitle">CDC Budget Utilization (2024-2040)</h2>
+
+            <h3>Strategic Allocation (%)</h3>
+            <div class="ppt-main-container">
+                <div class="input-section-group allocation-group" id="ppt-box-people">
+                    <h4>People</h4>
+                    <div class="input-group compact">
+                        <input type="number" id="utilizationPeople" value="20" step="1">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="input-section-group allocation-group" id="ppt-box-process">
+                    <h4>Process</h4>
+                    <div class="input-group compact">
+                        <input type="number" id="utilizationProcess" value="5" step="1">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="input-section-group allocation-group" id="ppt-box-tech">
+                    <h4>Technology</h4>
+                    <div class="input-group compact">
+                        <input type="number" id="utilizationTechnology" value="75" step="1">
+                        <span>%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cost-allocation-container">
+                <div class="input-section-group allocation-group">
+                    <h4>People Cost Allocation</h4>
+                    <div class="input-group compact">
+                        <label for="peopleCapex">Capex Costs <span class="info-icon" data-info-id="peopleCapexCosts">i</span></label>
+                        <input type="number" id="peopleCapex" value="10" step="1">
+                        <span>%</span>
+                    </div>
+                    <div class="input-group compact">
+                        <label for="peopleOpex">Baseline Opex <span class="info-icon" data-info-id="peopleBaselineOpex">i</span></label>
+                        <input type="number" id="peopleOpex" value="83" step="1">
+                        <span>%</span>
+                    </div>
+                     <div class="input-group compact">
+                        <label for="peopleRecCapex">Recurring Capex <span class="info-icon" data-info-id="peopleRecurringCapex">i</span></label>
+                        <input type="number" id="peopleRecCapex" value="2" step="1">
+                        <span>%</span>
+                    </div>
+                    <div class="input-group compact">
+                        <label for="peopleIncOpex">Incremental Opex <span class="info-icon" data-info-id="peopleIncrementalOpex">i</span></label>
+                        <input type="number" id="peopleIncOpex" value="5" step="1">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="input-section-group allocation-group">
+                    <h4>Process Cost Allocation</h4>
+                    <div class="input-group compact">
+                        <label for="processCapex">Capex Costs <span class="info-icon" data-info-id="processCapexCosts">i</span></label>
+                        <input type="number" id="processCapex" value="75" step="1">
+                        <span>%</span>
+                    </div>
+                    <div class="input-group compact">
+                        <label for="processOpex">Baseline Opex <span class="info-icon" data-info-id="processBaselineOpex">i</span></label>
+                        <input type="number" id="processOpex" value="15" step="1">
+                        <span>%</span>
+                    </div>
+                     <div class="input-group compact">
+                        <label for="processRecCapex">Recurring Capex <span class="info-icon" data-info-id="processRecurringCapex">i</span></label>
+                        <input type="number" id="processRecCapex" value="2" step="1">
+                        <span>%</span>
+                    </div>
+                    <div class="input-group compact">
+                        <label for="processIncOpex">Incremental Opex <span class="info-icon" data-info-id="processIncrementalOpex">i</span></label>
+                        <input type="number" id="processIncOpex" value="8" step="1">
+                        <span>%</span>
+                    </div>
+                </div>
+                <div class="input-section-group allocation-group">
+                    <h4>Technology Cost Allocation</h4>
+                    <div class="input-group compact">
+                        <label for="techCapex">Capex Costs <span class="info-icon" data-info-id="technologyCapexCosts">i</span></label>
+                        <input type="number" id="techCapex" value="50" step="1">
+                        <span>%</span>
+                    </div>
+                    <div class="input-group compact">
+                        <label for="techOpex">Baseline Opex <span class="info-icon" data-info-id="technologyBaselineOpex">i</span></label>
+                        <input type="number" id="techOpex" value="30" step="1">
+                        <span>%</span>
+                    </div>
+                     <div class="input-group compact">
+                        <label for="techRecCapex">Recurring Capex <span class="info-icon" data-info-id="technologyRecurringCapex">i</span></label>
+                        <input type="number" id="techRecCapex" value="15" step="1">
+                        <span>%</span>
+                    </div>
+                    <div class="input-group compact">
+                        <label for="techIncOpex">Incremental Opex <span class="info-icon" data-info-id="technologyIncrementalOpex">i</span></label>
+                        <input type="number" id="techIncOpex" value="5" step="1">
+                        <span>%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="investment-table-container">
+                <h3>Full Investment Breakdown (2024-2040)</h3>
+                <div class="year-slider-container">
+                    <label for="yearSlider">Selected Year: <span id="sliderYearLabel">2025</span></label>
+                    <input type="range" min="2024" max="2040" value="2025" class="year-slider" id="yearSlider">
+                </div>
+                <div class="table-container">
+                    <table id="investmentBreakdownTable">
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Category</th>
+                                <th>Initial Capex</th>
+                                <th>Baseline Opex</th>
+                                <th>Recurring Capex</th>
+                                <th>Incremental Opex</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="investmentBreakdownBody">
+                            <!-- Will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="action-buttons-bottom">
+                <button onclick="exportInvestmentBreakdown()">Export Investment Breakdown</button>
+                <button onclick="generateNarrative()">Generate & Download Narrative</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

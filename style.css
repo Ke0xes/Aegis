@@ -1,0 +1,1235 @@
+/* CSS Variables for Theming */
+:root {
+    /* Common Utilities */
+    --default-border-radius: 4px;
+    --large-border-radius: 8px;
+    --default-transition: all 0.3s ease;
+    --default-gap: 10px;
+    --default-margin: 20px;
+    --default-padding: 15px;
+    --input-width: 250px;
+    
+    /* Default Theme (Classic Theme) */
+    --primary-bg: #07182D;
+    --secondary-bg: #ffffff;
+    --muted-text: #666;
+    --accent-color: #007bff;
+    --font-color: #333;
+    --button-text-color: #ffffff;
+    --heading-color: #07182D;
+    --border-color: #c0c0c0;
+    --input-bg: #f0f4f8;
+    --input-border: #b8c4d0;
+    --group-border: #8896a6;
+    --table-header-bg: #e9ecef;
+    --table-header-color: #555;
+    --table-row-even-bg: #f6f6f6;
+    --table-total-row-bg: #e0e0e0;
+    --table-section-header-bg: #d4e6f1;
+    --info-icon-color: #007bff;
+    --info-icon-bg: transparent;
+    --info-icon-border: 1px solid #007bff;
+    --switch-bg-off: #ccc;
+    --switch-bg-on: #007bff;
+    --switch-slider-bg: #ffffff;
+    --loader-bg: rgba(255, 255, 255, 0.7);
+    --error-border: #D32F2F;
+    --error-bg: #FFEBEE;
+    --theme-toggle-text-color: #ffffff;  /* White for classic theme */
+}
+
+/* Dark Theme */
+body.professional-theme {
+    --primary-bg: #07182D;  /* Midnight Blue */
+    --secondary-bg: #0A1F35;  /* Slightly lighter Midnight Blue */
+    --accent-color: #07182D;  /* Button background color */
+    --font-color: #FFFFFF;  /* Text/Graphics */
+    --button-text-color: #FFFFFF;  /* White button text */
+    --heading-color: #FFFFFF;  /* White text for all headings and labels */
+    --border-color: #1A3454;  /* Derived from Midnight Blue */
+    --input-bg: #0D2340;  /* Darker input background */
+    --input-border: #1A3454;  /* Border matching theme */
+    --group-border: #1A3454;  /* Group borders */
+    --table-header-bg: #1A3454;  /* Table header */
+    --table-header-color: #FFFFFF;  /* White text for table headers */
+    --table-row-even-bg: #0A1F35;  /* Alternating row color */
+    --table-total-row-bg: #0D2340;  /* Total row background */
+    --table-section-header-bg: #1A3454;  /* Section headers */
+    --info-icon-color: #FF9000;  /* Orange for tooltip icons */
+    --info-icon-bg: #0D2340;  /* Info icon background */
+    --info-icon-border: 1px solid #FF9000;  /* Orange border */
+    --switch-bg-off: #1A3454;  /* Switch off state */
+    --switch-bg-on: #FF9000;  /* Orange for switch on state */
+    --switch-slider-bg: #FFFFFF;  /* White slider */
+    --loader-bg: rgba(7, 24, 45, 0.8);  /* Semi-transparent Midnight Blue */
+    --error-border: #FF4444;  /* Error red */
+    --error-bg: #2D0A0A;  /* Dark red background */
+    --theme-toggle-text-color: #FFFFFF;  /* White text for Dark theme */
+}
+
+/* Dark Theme Label Overrides - Make labels white for better readability */
+body.professional-theme .field-container .main-label {
+    color: var(--font-color); /* Use white instead of heading color */
+}
+
+body.professional-theme .grid-cell label,
+body.professional-theme .input-group label,
+body.professional-theme .source-input-group label,
+body.professional-theme .yearly-input-item label,
+body.professional-theme .input-group.compact label {
+    color: var(--font-color); /* Ensure all labels are white */
+}
+
+/* Make other text elements white for better readability in Dark Theme */
+body.professional-theme .mode-selector .mode-label.active,
+body.professional-theme .total-cdc-budget-display,
+body.professional-theme .view-label,
+body.professional-theme .indented-row-label {
+    color: var(--font-color); /* Use white for better readability */
+}
+
+/* Dark Theme - Use bright blue for borders, dividers, and focus highlights */
+body.professional-theme h1,
+body.professional-theme h2,
+body.professional-theme h3 {
+    border-bottom-color: #02C8FF;
+}
+
+body.professional-theme .input-base:focus,
+body.professional-theme .grid-cell input[type="number"]:focus,
+body.professional-theme .grid-cell .form-input:focus,
+body.professional-theme .input-group input:focus,
+body.professional-theme .input-group textarea:focus,
+body.professional-theme .input-group select:focus,
+body.professional-theme .source-input-group select:focus {
+    border-color: #02C8FF;
+}
+
+/* Dark Theme - Test Mode Button Colors */
+body.professional-theme .test-mode-btn {
+    background: #FF007F;
+}
+body.professional-theme .test-mode-btn:hover {
+    background: #D6006B;
+}
+
+/* Dark Theme - Tooltip headline colors */
+body.professional-theme .tooltip .tooltip-text h4,
+body.professional-theme .tooltip .tooltip-text h3 {
+    color: #FF9000;
+}
+
+/* Dark Theme - Tooltip background to translucent midnight blue */
+body.professional-theme .custom-tooltip {
+    background: rgba(7, 24, 45, 0.85);  /* Translucent Midnight Blue */
+}
+
+/* Dark Theme - Change hover border colors to bright blue instead of button blue */
+body.professional-theme .formatted-value:hover {
+    border-color: #02C8FF;
+}
+
+body.professional-theme .yearly-input-item input[type="number"]:focus {
+    border-color: #02C8FF;
+    box-shadow: 0 0 5px rgba(2, 200, 255, 0.2);
+}
+
+body.professional-theme .summary-card:hover {
+    border-color: #02C8FF;
+}
+
+body.professional-theme .category-box:hover {
+    border-color: #02C8FF;
+}
+
+/* Dark Theme - Investment Breakdown Table border colors */
+body.professional-theme #investmentBreakdownTable tr.lifecycle-end {
+    border-bottom-color: #02C8FF;
+}
+
+body.professional-theme #investmentBreakdownTable tr.grand-total {
+    border-top-color: #02C8FF;
+}
+
+/* Dark Theme - Button borders */
+body.professional-theme button:not(.test-mode-btn) {
+    border: 2px solid #02C8FF;
+}
+
+body.professional-theme .preset-button {
+    border: 2px solid #02C8FF;
+}
+
+body.professional-theme .view-toggle-btn {
+    border: 2px solid #02C8FF;
+}
+
+/* Dark Theme - Year slider thumb color in Full Investment Breakdown */
+body.professional-theme .year-slider::-webkit-slider-thumb {
+    background: #02C8FF;
+}
+
+body.professional-theme .year-slider::-moz-range-thumb {
+    background: #02C8FF;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--primary-bg);
+    color: var(--font-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.calculating .cdc-utilization-section {
+    position: relative;
+}
+.number-words {
+    color: var(--muted-text);
+    font-size: 0.9em;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+body.calculating .cdc-utilization-section::after {
+    content: 'Loading...';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--loader-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: var(--heading-color);
+    z-index: 10;
+    border-radius: 8px;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--secondary-bg);
+    padding: 30px;
+    border-radius: var(--large-border-radius);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: var(--default-transition);
+}
+
+h1, h2, h3 {
+    color: var(--heading-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-top: 30px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+h3 {
+    font-size: 1.2em;
+    border-bottom-width: 1px;
+}
+
+.input-section, .yearly-summary-section, .currency-section, .cdc-utilization-section {
+    margin-bottom: 40px;
+}
+
+.field-container {
+    margin-bottom: 20px;
+}
+
+.field-container .main-label {
+    display: block;
+    color: var(--heading-color);
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+.input-section-group {
+    border: 1px dashed var(--group-border);
+    padding: var(--default-margin);
+    margin-bottom: var(--default-margin);
+    border-radius: var(--large-border-radius);
+    background-color: var(--input-bg);
+    transition: var(--default-transition);
+    max-width: 1200px;  /* Match currency settings box width */
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 120px minmax(250px, 1fr);
+    grid-gap: 10px 20px;
+    align-items: center;
+}
+
+.grid-cell {
+    min-width: 0;
+}
+
+.grid-cell label {
+    font-weight: bold;
+}
+
+/* Base input styles */
+.input-base {
+    width: var(--input-width);
+    padding: 8px 12px;
+    border: 1px solid var(--input-border);
+    border-radius: var(--default-border-radius);
+    background-color: var(--secondary-bg);
+    color: var(--font-color);
+    font-size: 0.9em;
+    transition: var(--default-transition);
+}
+
+.input-base:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+.grid-cell input[type="number"],
+.grid-cell .form-input {
+    width: var(--input-width);
+    padding: 8px 12px;
+    border: 1px solid var(--input-border);
+    border-radius: var(--default-border-radius);
+    background-color: var(--secondary-bg);
+    color: var(--font-color);
+    font-size: 0.9em;
+    transition: var(--default-transition);
+}
+
+/* Remove spinner arrows in Chrome, Safari, Edge, and Opera */
+.grid-cell input[type="number"]::-webkit-outer-spin-button,
+.grid-cell input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.grid-cell .input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.grid-cell input[type="number"]:focus,
+.grid-cell .form-input:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    background-color: var(--secondary-bg);
+}
+
+.grid-cell textarea {
+    width: 250px;
+    height: 50px;
+    resize: none;
+}
+
+.grid-cell textarea.full-width {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    min-height: 80px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 600px;  /* Limit the width of input groups */
+    margin-bottom: var(--default-margin);
+}
+.input-group:last-child {
+    margin-bottom: 0;
+}
+
+.input-group label {
+    flex: 1;
+    min-width: 250px;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.input-group input[type="number"],
+.input-group textarea,
+.input-group select {
+    flex: 2;
+    min-width: 200px;
+    padding: 8px 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: var(--secondary-bg);
+    color: var(--font-color);
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus, .input-group textarea:focus, .input-group select:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+/* Formatted value display */
+.formatted-value {
+    flex: 2;
+    min-width: 200px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: var(--secondary-bg);
+    color: var(--font-color);
+    cursor: text;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.formatted-value:hover {
+    border-color: var(--accent-color);
+}
+
+.input-group input[type="number"] {
+    width: 250px;  /* Fixed width for number inputs */
+    padding: 8px 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: var(--secondary-bg);
+    color: var(--font-color);
+}
+
+/* Remove spinner arrows in Chrome, Safari, Edge, and Opera */
+.input-group input[type="number"]::-webkit-outer-spin-button,
+.input-group input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Prevent auto-zoom on focus (mobile) */
+@media screen and (max-width: 768px) {
+    .input-group input[type="number"] {
+        font-size: 16px;
+    }
+}
+
+.source-input-group {
+    margin-top: 10px;
+    max-width: 600px;  /* Match main input group width */
+}
+
+.source-input-group label {
+    min-width: 60px;
+    flex: none;
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+.source-input-group textarea {
+    width: 250px;  /* Match number input width */
+    font-size: 0.9em;
+    padding: 6px 10px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    background-color: var(--secondary-bg);
+    color: var(--font-color);
+    height: 25px;  /* Single line height */
+    resize: none;
+    line-height: 1;  /* Tighter line height for single line */
+    overflow-y: auto;  /* Add scrollbar if content overflows */
+}
+
+.info-icon {
+    cursor: help;
+    margin-left: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--info-icon-bg);
+    border: var(--info-icon-border);
+    color: var(--info-icon-color);
+    font-weight: bold;
+    font-size: 0.8em;
+    transition: all 0.3s ease;
+}
+.info-icon:hover {
+    transform: scale(1.1);
+}
+
+.mode-selector {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: var(--secondary-bg);
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    width: fit-content;
+}
+.mode-selector .mode-label {
+    font-size: 0.9em;
+    color: var(--font-color);
+    opacity: 0.7;
+}
+.mode-selector .mode-label.active {
+    color: var(--heading-color);
+    opacity: 1;
+}
+.mode-selector .switch {
+    width: 46px;
+    height: 24px;
+}
+.mode-selector .slider:before {
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+}
+.mode-selector input:checked + .slider:before {
+    transform: translateX(22px);
+}
+
+.flex-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.grid-layout {
+    flex: 1;
+}
+
+.preset-models-box {
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--default-border-radius);
+    padding: 15px;
+    min-width: 300px;
+}
+
+.preset-models-box h4 {
+    margin: 0 0 15px 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--heading-color);
+    text-align: center;
+}
+
+.preset-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.preset-button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: var(--default-border-radius);
+    cursor: pointer;
+    transition: var(--default-transition);
+    font-size: 0.9em;
+    background-color: var(--accent-color);
+    color: var(--button-text-color);
+    min-width: 80px;
+}
+
+.preset-button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+.yearly-inputs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+    margin-top: 10px;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.grid-heading {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 0 0 10px 0;
+    color: var(--heading-color);
+    font-size: 1em;
+}
+
+.yearly-input-item {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8px;
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.yearly-input-item label {
+    flex: none;
+    min-width: unset;
+    margin-right: 0;
+    margin-bottom: 2px;
+    text-align: left;
+    font-weight: normal;
+    color: var(--font-color);
+    font-size: 0.8em;
+}
+
+.yearly-input-item input[type="number"] {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 0.9em;
+    box-sizing: border-box;
+    background-color: var(--secondary-bg);
+    color: var(--font-color);
+    transition: all 0.3s ease;
+    text-align: right;
+}
+
+.yearly-input-item input[type="number"]:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.action-buttons-top, .action-buttons-bottom, .action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.action-buttons-bottom {
+    justify-content: center;
+    margin-top: 20px;
+}
+.action-buttons {
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--button-text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button:hover {
+    filter: brightness(1.1);
+}
+
+.currency-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.currency-section select.form-input {
+    width: 250px;
+    padding: 8px 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    background-color: var(--secondary-bg);
+    color: var(--font-color);
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.currency-section input[type="number"]:disabled {
+    background-color: var(--input-bg);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.table-container {
+    overflow-x: auto;
+    width: 100%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+table th, table td {
+    border: 1px solid var(--border-color);
+    padding: 10px 12px;
+    text-align: left;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+table th {
+    background-color: var(--table-header-bg);
+    color: var(--table-header-color);
+    font-weight: bold;
+}
+table tbody tr:nth-child(even) {
+    background-color: var(--table-row-even-bg);
+}
+.indented-row-label {
+    padding-left: 30px !important;
+    font-style: italic;
+}
+
+/* Test Mode Container */
+.test-mode-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+/* Theme Toggle */
+.theme-toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+}
+.theme-label {
+    color: var(--theme-toggle-text-color);
+    font-weight: bold;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+}
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: var(--switch-bg-off);
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px; width: 18px;
+  left: 3px; bottom: 3px;
+  background-color: var(--switch-slider-bg);
+  transition: .4s;
+}
+input:checked + .slider { background-color: var(--switch-bg-on); }
+input:checked + .slider:before { transform: translateX(22px); }
+.slider.round { border-radius: 34px; }
+.slider.round:before { border-radius: 50%; }
+
+/* TEST MODE BUTTON - START (easily removable) */
+.test-mode-btn {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.test-mode-btn:hover {
+    filter: brightness(0.9);
+}
+/* TEST MODE BUTTON - END */
+
+/* Custom Tooltip */
+.custom-tooltip {
+    position: absolute;
+    background: rgba(53, 56, 54, 0.50);
+    color: #fff;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 9px 12px;
+    border-radius: var(--default-border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    width: 350px;
+    max-width: 350px;
+    z-index: 1001;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0.95) translateY(-5px);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    line-height: 1.3;
+    font-size: 0.9em;
+    will-change: opacity, transform;
+}
+.custom-tooltip[style*="opacity: 1"] {
+    transform: scale(1) translateY(0);
+}
+
+.custom-tooltip strong {
+    color: var(--info-icon-color);
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.95em;
+}
+.custom-tooltip em {
+    font-style: normal;
+    font-weight: bold;
+    color: var(--info-icon-color);
+}
+.custom-tooltip ul {
+    padding-left: 20px;
+    margin: 5px 0 0 0;
+}
+
+/* CDC UTILIZATION SECTION */
+.cdc-utilization-section p {
+    max-width: 80ch;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.utilization-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    background: var(--input-bg);
+    padding: 15px;
+    border-radius: 8px;
+}
+.year-slider-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.year-slider {
+    width: 100%;
+    cursor: pointer;
+    height: 6px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--input-border);
+    border-radius: 3px;
+    outline: none;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+/* Slider thumb styling */
+.year-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--secondary-bg);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.year-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--secondary-bg);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Hover effects */
+.year-slider:hover {
+    opacity: 1;
+}
+
+.year-slider::-webkit-slider-thumb:hover,
+.year-slider::-moz-range-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Active state */
+.year-slider::-webkit-slider-thumb:active,
+.year-slider::-moz-range-thumb:active {
+    transform: scale(0.95);
+}
+
+.view-toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.view-label {
+    font-weight: bold;
+}
+.total-cdc-budget-display {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: var(--input-bg);
+    border-radius: 8px;
+    color: var(--heading-color);
+}
+
+.ppt-main-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+.ppt-main-container .allocation-group {
+    flex: 1;
+    padding: 15px;
+    margin-bottom: 0;
+}
+.ppt-main-container .allocation-group h4 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    text-align: center;
+    border-bottom: none;
+}
+.ppt-main-container .input-group.compact {
+    justify-content: center;
+}
+
+.cost-allocation-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.cost-allocation-container .allocation-group {
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 0;
+}
+
+.allocation-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.allocation-group h4 {
+    margin: 0 0 10px 0;
+    padding: 0 0 5px 0;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+.input-group.compact {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0;
+}
+.input-group.compact label {
+    flex: 1;
+    min-width: 120px;
+    margin: 0;
+}
+.input-group.compact input {
+    flex: 0 1 80px;
+    min-width: 60px;
+    text-align: right;
+}
+.input-group.compact span {
+    font-weight: bold;
+}
+
+.allocation-group.error-state {
+    border: 2px solid var(--error-border);
+    background-color: var(--error-bg);
+}
+
+.input-group.error-state {
+    background-color: var(--error-bg);
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.input-group.error-state input {
+    border-color: var(--error-border);
+}
+
+#utilizationDisplayContainer {
+    transition: opacity 0.3s ease;
+}
+.summary-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.summary-card {
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-color: var(--accent-color);
+}
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.card-header h3 {
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+.card-total {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--heading-color);
+}
+.card-body .card-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 0.95em;
+}
+
+#utilizationDetailedTable .total-row, #utilizationDetailedTable .grand-total-row {
+    font-weight: bold;
+}
+#utilizationDetailedTable .total-row {
+    background-color: var(--table-total-row-bg);
+}
+#utilizationDetailedTable .tbody-header {
+    background-color: var(--table-section-header-bg);
+    font-weight: bold;
+    color: var(--table-header-color);
+    text-align: left;
+    padding-left: 20px;
+}
+#utilizationDetailedTable .grand-total-row .tbody-header {
+    text-align: left;
+}
+
+#exportUtilizationButton {
+    display: none; /* Hidden by default */
+}
+
+/* Investment Model Section Styles */
+.investment-model-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid var(--border-color);
+}
+
+.investment-controls {
+    margin-bottom: 30px;
+    background: var(--input-bg);
+    padding: 20px;
+    border-radius: var(--large-border-radius);
+}
+
+.investment-controls h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--heading-color);
+}
+
+.investment-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.category-box {
+    background: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--large-border-radius);
+    padding: 20px;
+    transition: var(--default-transition);
+}
+
+.category-box:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.category-box h4 {
+    color: var(--heading-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.category-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-box li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.category-box li:last-child {
+    border-bottom: none;
+}
+
+.investment-table-container {
+    margin-top: 30px;
+}
+
+#investmentBreakdownTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#investmentBreakdownTable th,
+#investmentBreakdownTable td {
+    padding: 12px;
+    text-align: right;
+}
+
+#investmentBreakdownTable th:first-child,
+#investmentBreakdownTable td:first-child,
+#investmentBreakdownTable td:nth-child(2) {
+    text-align: left;
+}
+
+#investmentBreakdownTable tr.year-total {
+    background-color: var(--table-total-row-bg);
+    font-weight: bold;
+}
+
+#investmentBreakdownTable tr.lifecycle-end {
+    border-bottom: 2px solid var(--accent-color);
+}
+
+#investmentBreakdownTable tr.grand-total {
+    background-color: var(--table-section-header-bg);
+    font-size: 1.1em;
+    border-top: 3px double var(--accent-color);
+}
+
+.people-row { border-left: 3px solid #4CAF50; }
+.process-row { border-left: 3px solid #2196F3; }
+.tech-row { border-left: 3px solid #FF9800; }
+
+/* Conflict Warning Styles */
+.conflict-warning {
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: var(--default-border-radius);
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9em;
+}
+
+.professional-theme .conflict-warning {
+    background-color: #3e3e2f;
+    border-color: #f7ec10;
+    color: var(--font-color);
+}
+
+/* Budget Utilization View Toggle */
+.utilization-view-toggle-container {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+.utilization-view-toggle-container h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--font-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.utilization-view-selector {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.view-toggle-btn {
+    background-color: var(--accent-color);
+    color: var(--button-text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.view-toggle-btn:hover {
+    filter: brightness(1.1);
+}
+
+.view-toggle-btn.active {
+    opacity: 1;
+    font-weight: 600;
+    filter: brightness(1.2);
+}
+
+#utilizationSectionTitle {
+    color: var(--font-color);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.warning-icon {
+    font-size: 1.2em;
+    flex-shrink: 0;
+}
+
+.warning-text {
+    flex-grow: 1;
+    line-height: 1.4;
+}
