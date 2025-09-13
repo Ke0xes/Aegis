@@ -89,4 +89,4 @@ For support, feature requests, or bug reports, please open an issue on GitHub.
 ## License
 
 <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Creative Commons By" width="25" height="25"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Creative Commons By" width="25" height="25"> <br>
-<a href="https://github.com/Ke0xes/Detection-Engineering-Framework">Detection Engineering Framework</a> © 2021 by <a href="https://kunal.hatode.com">Kunal Hatode</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a>
+<a href="https://github.com/Ke0xes/Detection-Engineering-Framework">Detection Engineering Framework</a> © 2025 by <a href="https://kunal.hatode.com">Kunal Hatode</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International</a>
